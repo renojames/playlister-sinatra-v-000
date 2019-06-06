@@ -52,7 +52,6 @@ class SongsController < ApplicationController
         @song.genres << Genre.find(genre_id.to_i)
       end
     end
-    binding.pry
     @song.save
     redirect "/songs/#{@song.slug}"
   end
